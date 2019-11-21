@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Forms</title>
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+   </head>
+   <body>
+   <div class="header-container">
+   <div class="logo">
+   <div class="logo-img">
+   <img src="img/logo.png"/>
+   </div>
+   <div class="logo-text">
+   Forms
+   </div>
+   <div class="clear"></div>
+   </div>
+   <div class="menu">
+   <nav>
+   <ul>
+   <li><a href="#">Features</a></li>
+   <li><a href="#">Free Resources</a></li>
+   <li><a href="#">Pricing</a></li>
+   <li><a href="#">Customers</a></li>
+   <li><a href="#">Integrations</a></li>
+   <li><a href="#">Knowledge Base</a></li>
+   <li>
+	<a href="#">
+        <i class="fa fa-bars"></i>
+     </a>
+	</li>
+   </ul>
+   </nav>
+   </div>
+    <div class="clear"></div>
+   </div>
+   
+   <script>
+   $(function() {
+  var ulLi = $('nav ul > li'),
+      fa = $('nav ul > li:last-of-type a .fa');
+  
+   $('nav ul').append('<ol></ol>');
+  
+   $('nav').each(function() {
+     for (var i=0; i <= ulLi.length - 2; i++) {
+       $('nav ul > ol').append("<li>"+ i +"</li>");
+       $('nav ul > ol > li').eq(i).html(ulLi.eq(i).html());
+     }
+  });
+
+  $('nav ul > li:last-of-type').on('click', function() {
+    fa.toggleClass('fa-bars');
+    fa.toggleClass('fa-times');
+    $(this).parent().children('ol').slideToggle(500);
+  });
+});
+
+   </script>
+   </body>
+   </html>
