@@ -1,0 +1,131 @@
+@font-face {
+	font-family: ProximaNova-Bold;
+	src: url("../fonts/Proxima-nova-bold.ttf");
+}
+
+@font-face {
+	font-family: ProximaNova-Semibold;
+	src: url("../fonts/Proxima-Nova-Semibold.otf") format("opentype");
+}
+
+@font-face {
+	font-family: NotoSerif-Bold;
+	src: url("../fonts/NotoSerif-Bold.ttf");
+}
+@font-face {
+	font-family: NotoSerif-Regular;
+	src: url("../fonts/NotoSerif-Regular.ttf");
+}
+@font-face {
+	font-family: ProximaNova-Regular;
+	src: url("../fonts/Proxima-nova-regular.ttf");
+}
+
+@font-face {
+	font-family: RobotoSlab-Bold;
+	src: url("../fonts/RobotoSlab-Bold.ttf");
+}
+
+@font-face {
+	font-family: RobotoSlab-Thin;
+	src: url("../fonts/RobotoSlab-Thin.ttf");
+}
+
+@font-face {
+	font-family: RobotoSlab-Regular;
+	src: url("../fonts/RobotoSlab-Regular.ttf");
+}
+
+@font-face {
+	font-family: ProximaNova-Light;
+	src: url("../fonts/Proxima-Nova-Light.otf");
+}
+
+body {max-width:1170px; margin:0 auto;}
+.clear{clear:both;}
+.logo-img{float:left; display:inline;}
+.logo-text{float:left; display:inline; font-family:ProximaNova-Semibold;font-size:32px;margin-top:28px; padding-left:15px;}
+.logo {float:left; display:inline;}
+.menu {float:right;}
+/*.menu ul {padding-top:15px;}
+nav ul li {display:inline-block;padding-right:20px;}
+
+*/
+
+nav ul li a {
+  color: #000;
+  text-decoration: none;
+  font-family:ProximaNova-Regular;
+  font-size:20px;
+}
+/* End General */
+
+
+nav ul > li {
+  padding: 15px;
+  display: inline-block;
+  transition: all .3s ease;
+  margin-left: -5px
+}
+
+nav ul > li:last-of-type {
+  float: right;
+}
+nav ul > li:last-of-type a .fa {
+  font-size: 21px
+}
+/* End Navbar */
+
+/* Start Menue Right */
+nav ul > li:last-of-type {
+  position: relative;
+  display: none
+}
+nav ul > ol {
+  position: absolute;
+  top: 49px;
+  right: 0;
+  background: #333;
+  text-align: center;
+  list-style: none;
+  display: none
+}
+nav ul > ol > li {
+  width: 100vw;
+  color: #FFF;
+  margin: 0;
+  padding: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  transition: all .3s ease;
+}
+nav ul > ol > li:hover a {
+  margin: 20px;
+}
+
+
+/* Start Menue Right */
+
+/* Start Media Query */
+@media screen and (max-width:680px){
+  nav ul > li {
+    display:none
+  }
+  nav ul > ol {
+ top:120px !important;
+  }
+  nav ul > ol > li
+  {
+	  background-color:#FFF;
+	  font-family:ProximaNova-Regular;
+	  font-size:20px;
+	 
+  }
+  
+  nav ul > li:last-of-type {
+    display: block
+  }
+
+}
+
+/* End Media Query */
